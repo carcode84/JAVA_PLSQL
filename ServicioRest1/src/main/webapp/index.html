@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Query Interface</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="backbox">
+      <div class="loginMsg">
+        <div class="textcontent">
+          <p class="title">Don't have an account?</p>
+          <p>Sign up to save all your graph.</p>
+          
+        </div>
+      </div>
+      <div class="signupMsg visibility">
+        <div class="textcontent">
+          <p class="title">Have an account?</p>
+          <p>Log in to see all your collection.</p>
+          
+        </div>
+      </div>
+    </div>
+    <!-- backbox -->
+
+    <div class="frontbox">
+      <div class="login">
+        <h2>LOG IN</h2>
+        <form id="user-form">
+        <div class="inputbox">
+    		<select class="selectbox" name="document-type" id="document-type">
+				<option value="x" selected>Selección tipo Documento</option>
+				<option value="c">Cedula de Ciudadania</option>
+				<option value="p">Pasaporte</option>
+			</select>
+          <input type="number" name="document-number" id="document-number" placeholder="  DOCUMENTO">
+        </div>
+        <button id="switch1">Consultar</button>
+        </form>
+      </div>
+
+      <div class="signup hide">
+        <h2>INFORMACIÓN DEL USUARIO</h2>
+        <div class="inputbox">
+          <table id="datatable" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>firstname</th>
+                    <th>secondname</th>
+                    <th>lastname</th>
+                    <th>sendlastname</th>
+                    <th>telefono</th>
+                    <th>dirección</th>
+                    <th>ciudad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="switch2">ATRAS</button>
+        </div>
+      </div>
+
+    </div>
+    <!-- frontbox -->
+  </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
